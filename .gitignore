@@ -1,0 +1,7 @@
+/Include
+/Scripts
+/Lib
+/.vscode
+/__pycache__
+*.cfg
+requirements.txt
