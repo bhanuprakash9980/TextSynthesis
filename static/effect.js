@@ -18,7 +18,7 @@ $(document).ready(function() {
 		.done(function(data) {
           
             if(data.text)
-            {
+            {   $("#textdiv").show()
                 $("#textoutput").text(data.text);
                 $("#more").show()
             }

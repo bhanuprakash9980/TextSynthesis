@@ -7,7 +7,7 @@
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='effect.css') }}">
     <title>Text Synthesis App</title>
 
 </head>
@@ -34,7 +34,8 @@
           </div>           
           </div>
          <div class="row">
-            <div class="col s12">
+            <div class="col s12" id="textdiv" style="display: none; font-size: 16px;">
+              <h4>Completed Text</h4>
               <pre id="textoutput"  ></pre>          
               </textarea>
             </div>            
@@ -45,7 +46,7 @@
        
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="{{ url_for('static', filename='effects.js') }}" ></script>
+<script src="{{ url_for('static', filename='effect.js') }}" ></script>
 
 </body>
 </html>

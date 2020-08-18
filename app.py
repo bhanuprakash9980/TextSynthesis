@@ -28,7 +28,7 @@ def home():
 @app.route('/gen',methods=["POST"])
 def gen():
     text=request.form["text"]
-    result = gen_text(text,max_length=(len(text)+1000))
+    result = gen_text(text,max_length=(len(text)+10))
     result=result.replace('<|endoftext|>','')
     return jsonify({'text' : result})
 
