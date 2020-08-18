@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <!-- Compiled and minified CSS -->
+    <!-- for styles materializecss -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- including the stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='effect.css') }}">
     <title>Text Synthesis App</title>
 
@@ -18,17 +19,19 @@
         <form class="col s12" >
           <div class="row">
             <div class="input-field col s12">
-
+            <!-- Taking input through text area -->
               <textarea id="textarea1"   ></textarea>
               
             </div>
           </div>
           <div class="row">
             <div class="col s6">
+              <!-- Button to generate the new text from the query provided -->
                 <button class="btn waves-effect waves-light" id="gen">Generate
                   </button>
             </div>   
             <div class="col s6">
+              <!-- Button to generate the remaining part of the text already generated -->
               <button class="btn waves-effect waves-light" id="more" style="display: none;">More
                 </button>
           </div>           
@@ -36,6 +39,7 @@
          <div class="row">
             <div class="col s12" id="textdiv" style="display: none; font-size: 16px;">
               <h4>Completed Text</h4>
+              <!-- pre area is used to show the output -->
               <pre id="textoutput"  ></pre>          
               </textarea>
             </div>            
@@ -45,7 +49,9 @@
        </div>
        
       </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- jquery cdn -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- including the js file -->
 <script src="{{ url_for('static', filename='effect.js') }}" ></script>
 
 </body>

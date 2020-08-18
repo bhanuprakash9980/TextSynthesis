@@ -3,6 +3,7 @@ textarea {
     overflow: hidden; 
     resize: none; 
 }
+/* prevents the pre lemebt to go beyond the screen width */
 pre {
     white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
     white-space: -pre-wrap; /* Opera */

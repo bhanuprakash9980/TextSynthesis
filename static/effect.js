@@ -1,4 +1,6 @@
+// Only execute when page is loaded completely
 $(document).ready(function() {
+    //function to auto set the height of the text area when query length increases
 	$('textarea').on('input', function () { 
 		this.style.height = 'auto'; 
 		  
@@ -6,8 +8,9 @@ $(document).ready(function() {
 				(this.scrollHeight) + 'px'; 
 	}); 
 
+//function which handles the generate new text button by sending ajax post request
 	$('#gen').on('click', function(event) {
-        
+        // making post request with the value of textarea  to /gen route
 		$.ajax({
 			data : {
 				text:$('#textarea1').val()
@@ -16,7 +19,7 @@ $(document).ready(function() {
 			url : '/gen'
 		})
 		.done(function(data) {
-          
+        //   when the post request is succesful displayng the more button and the output
             if(data.text)
             {   $("#textdiv").show()
                 $("#textoutput").text(data.text);
@@ -27,7 +30,8 @@ $(document).ready(function() {
 
 		event.preventDefault();
 
-    });
+	});
+	// function which handles the generate new text button by sending ajax post request
     $('#more').on('click', function(event) {
         
 		$.ajax({
@@ -40,7 +44,7 @@ $(document).ready(function() {
 		.done(function(data) {
        
             if(data.text)
-            {   data.text=data.text.replace('<|endoftext|>','');
+            {   
                 $("#textoutput").text(data.text);
                 $("#more").show()
             }
