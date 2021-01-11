@@ -1,4 +1,4 @@
-1.execute  the command in terminal-> git clone https://github.com/stablx/content1.stablx.com.git
+1.execute  the command in terminal-> git clone https://github.com/bhanuprakash9980/TextSynthesis.git
 
 
 
